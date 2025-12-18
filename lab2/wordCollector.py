@@ -1,6 +1,7 @@
 # 2. Unique Words Collector 
 # Take a paragraph input from the user. Split it into words, remove duplicates, sort them 
 # alphabetically, and count the total number of unique words.
+
 par = input("Enter the paragraph: ")
 
 words = par.lower().split()
@@ -20,7 +21,7 @@ for w in words:
 
 print("Word frequency:")
 for i in range(len(unique_words)):
-    print(unique_words[i],":",frequency[i])
+    print(unique_words[i], ":", frequency[i], "ASCII:", [ord(c) for c in unique_words[i]])
 
 
 

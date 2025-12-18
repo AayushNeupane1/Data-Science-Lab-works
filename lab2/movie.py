@@ -4,9 +4,6 @@ movies =[]
 s_rate =0
 
 movie_input =input("Enter movies and ratings seperated by space (e.g. Movie1-8.5 Movie2-7.0): ")
-
-# movie_input =movie_input.replace(",", " ")
-print(f'Replacioned commas: ')
 print(movie_input)
 entries=movie_input.split()
 print("The movies and ratings you entered:", entries)
@@ -19,7 +16,7 @@ for item in entries:
 
 print("Entered movies and ratings:",movies)
 
-average_rating = s_rate / len(movies)
+average_rating = s_rate/len(movies)
 
 h_rate = movies[0]
 for movie in movies[1:]:

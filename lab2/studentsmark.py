@@ -1,27 +1,53 @@
-#  Student Marks Manager 
-# Store student names as keys and marks (list of integers) as values in a dictionary. Compute 
-# each student’s average and grade (A/B/C/D). Print the top 2 students based on average marks. 
+# Student Marks Manager
 
-student={
-    "Aayush":[85,90,78],
-    "Aastha":[88,76,92],
-    "Smriti":[90,91,89]
-}
-s_avg=0
+students={}
+n =int(input("Enter the number of students:"))
+for i in range(n):
+    name=input("Enter student name: ")
+    marks_input=input("Enter marks separated by space: ")
+    #makers lai list ma convert garne for each student 
 
-for name, marks in student.items():
-    avg=sum(marks)/len(marks)
-    s_avg+=avg
-    if avg>=90:
-        grade='A'
-    elif avg>=80:
-        grade='B'
-    elif avg>=70:
-        grade='C'
+    marks=[]
+
+    for m in marks_input.split():
+        marks.append(int(m))
+
+    students[name] = marks
+
+student_data = {}
+
+# average and grade
+
+for name in students:
+    marks = students[name]
+    average = sum(marks)/len(marks)
+
+    if average >= 90:
+        grade = "A"
+    elif average >= 80:
+        grade = "B"
+    elif average >= 70:
+        grade = "C"
     else:
-        grade='D'
-    student[name]=(marks,avg,grade)
-    print(f"{name}: Marks: {marks}, Average: {avg}, Grade: {grade}")
+        grade = "D"
+
+    student_data[name] = (marks,average,grade)
+
+    print(name, "Marks:", marks,"Average:", round(average, 2),"Grade:", grade)
 
 
-    #top 2 students 
+avg_list = []
+
+for name in student_data:
+    avg_list.append((name, student_data[name][1]))
+
+avg_list.sort()
+
+print("\nTop 2 students based on average marks:")
+
+for i in range(2):
+    name = avg_list[i][0]
+    average = avg_list[i][1]
+    grade = student_data[name][2]
+
+    print("name:", name, "average:", round(average, 2),"grade:", grade)
