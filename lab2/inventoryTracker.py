@@ -1,4 +1,3 @@
-inventory = {}
 
 # pasal ma bhako saman haru 
 

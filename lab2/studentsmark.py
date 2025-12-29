@@ -5,7 +5,7 @@ n =int(input("Enter the number of students:"))
 for i in range(n):
     name=input("Enter student name: ")
     marks_input=input("Enter marks separated by space: ")
-    #makers lai list ma convert garne for each student 
+    #markss lai list ma convert garne for each student 
 
     marks=[]
 
@@ -39,15 +39,15 @@ for name in students:
 avg_list = []
 
 for name in student_data:
-    avg_list.append((name, student_data[name][1]))
+    avg_list.append((student_data[name][1], name))
 
-avg_list.sort()
+avg_list.sort(reverse=True)
 
-print("\nTop 2 students based on average marks:")
+print("Top 2 students based on average marks:")
 
 for i in range(2):
-    name = avg_list[i][0]
-    average = avg_list[i][1]
-    grade = student_data[name][2]
+    average =avg_list[i][0]
+    name=avg_list[i][1]
+    grade=student_data[name][2]
 
-    print("name:", name, "average:", round(average, 2),"grade:", grade)
+    print("name:", name, "average:", round(average, 2), "grade:", grade)
