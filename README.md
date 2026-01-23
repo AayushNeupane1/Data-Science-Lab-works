@@ -76,29 +76,83 @@ Covers the basics of Python, conditions, input handling, functions, and control 
 
 ---
 
-## Lab 2: Object-Oriented Programming
+## Lab 2: Data Structures in Python
 
-Covers object-oriented programming concepts including classes, objects, inheritance, and polymorphism.
+Covers data structures including lists, dictionaries, and sets. Focuses on manipulation, analysis, and organization of data.
 
-### Files
-- [lab2/inventoryTracker.py](lab2/inventoryTracker.py)
-- [lab2/movie.py](lab2/movie.py)
-- [lab2/studentsmark.py](lab2/studentsmark.py)
-- [lab2/wordCollector.py](lab2/wordCollector.py)
-- [lab2/wordReverser.py](lab2/wordReverser.py)
+### Questions and Objectives
+
+1. **Movie Ratings Analyzer**
+   - Ask the user to input a list of movies with ratings like [("Titanic", 8), ("Inception", 9), ...].
+   - Compute the average rating.
+   - Find the highest-rated movie.
+   - List all movies with rating above the average.
+   - File: [lab2/movie.py](lab2/movie.py)
+
+2. **Unique Words Collector**
+   - Take a paragraph input from the user.
+   - Split it into words, remove duplicates, sort them alphabetically.
+   - Count the total number of unique words.
+   - File: [lab2/wordCollector.py](lab2/wordCollector.py)
+
+3. **Student Marks Manager**
+   - Store student names as keys and marks (list of integers) as values in a dictionary.
+   - Compute each student's average and grade (A/B/C/D).
+   - Print the top 2 students based on average marks.
+   - File: [lab2/studentsmark.py](lab2/studentsmark.py)
+
+4. **Inventory Tracker**
+   - Manage a small store inventory like {"apple": 10, "banana": 5, "milk": 2}.
+   - Program should allow:
+     - Adding new items
+     - Selling items (subtract quantity)
+     - Print items that are low in stock (<3)
+   - File: [lab2/inventoryTracker.py](lab2/inventoryTracker.py)
+
+5. **Word Reverser Game**
+   - Ask the user for a list of words.
+   - Reverse each word only if its length is even.
+   - Print the new list of words after processing.
+   - File: [lab2/wordReverser.py](lab2/wordReverser.py)
 
 ---
 
-## Lab 3: File Handling and Data Processing
+## Lab 3: File Handling & Exception Handling
 
-Covers file handling, working with different file formats (CSV, JSON, TXT), and data processing.
+Covers file handling operations and exception handling for robust file operations with different file formats.
 
-### Files
-- [lab3/basicfileHandling.py](lab3/basicfileHandling.py)
-- [lab3/csv.py](lab3/csv.py)
-- [lab3/fileProcessing.py](lab3/fileProcessing.py)
-- [lab3/jsonfile.py](lab3/jsonfile.py)
-- [lab3/menuDriven.py](lab3/menuDriven.py)
+### Questions and Objectives
+
+1. **Basic File Read & Write**
+   - Create a text file and write multiple lines into it.
+   - Read the contents of the file and display them on the screen.
+   - Handle the case where the file does not exist using try-except.
+   - File: [lab3/basicfileHandling.py](lab3/basicfileHandling.py)
+
+2. **File Processing with Exception Handling**
+   - Reads numbers from a text file (one number per line).
+   - Ignores invalid entries using exception handling.
+   - Calculates and displays the sum and average of valid numbers.
+   - File: [lab3/fileProcessing.py](lab3/fileProcessing.py)
+
+3. **CSV File Handling**
+   - Read data from a CSV file containing student records (roll number, name, marks).
+   - Display all student records.
+   - Handle file-related and data conversion errors using try-except.
+   - File: [lab3/csv.py](lab3/csv.py)
+
+4. **Writing and Reading JSON Data**
+   - Stores student details (ID, name, and marks) in a JSON file.
+   - Reads the JSON file and displays the student information.
+   - Handles exceptions related to file access and JSON decoding.
+   - File: [lab3/jsonfile.py](lab3/jsonfile.py)
+
+5. **Menu-Driven File Operations**
+   - Write data to a file.
+   - Read data from a file.
+   - Append data to a file.
+   - Handle invalid user input and file errors using exception handling.
+   - File: [lab3/menuDriven.py](lab3/menuDriven.py)
 
 ### Data Files
 - [lab3/qst1.txt](lab3/qst1.txt)
