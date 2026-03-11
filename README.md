@@ -175,4 +175,134 @@ Covers advanced Python concepts including generators, list comprehensions, regul
 - [lab4/regex.py](lab4/regex.py)
 - [lab4/zipFunction.py](lab4/zipFunction.py)
 
+---
 
+## Lab 5: Data Science Fundamentals with Pandas
+
+Covers data science fundamentals using the Pandas library for data manipulation, cleaning, transformation, and analysis.
+
+### Questions and Objectives
+
+1. **CSV to DataFrame**
+   - Load a CSV file into a DataFrame.
+   - Display column names, data types, and basic statistics.
+   - File: [lab5/csv_to_DF.py](lab5/csv_to_DF.py)
+
+2. **Display Head and Shape**
+   - Display the first few rows and the shape of a DataFrame.
+   - Understand the structure and dimensions of the dataset.
+   - File: [lab5/headShape.py](lab5/headShape.py)
+
+3. **Detect and Remove Duplicates**
+   - Detect duplicate rows in the dataset.
+   - Remove duplicates and verify the result.
+   - File: [lab5/duplicateValues.py](lab5/duplicateValues.py)
+
+4. **Handle Missing Values**
+   - Identify missing values in a DataFrame.
+   - Fill missing values using appropriate strategies (mean, median, forward fill, etc.).
+   - File: [lab5/fillingMissing.py](lab5/fillingMissing.py)
+
+5. **Outlier Detection and Removal**
+   - Identify outliers in the Marks column using the IQR (Interquartile Range) method.
+   - Remove the outliers from the dataset.
+   - **IQR Method**: `IQR = Q3 - Q1`, `Lower Bound = Q1 - 1.5*IQR`, `Upper Bound = Q3 + 1.5*IQR`
+   - File: [lab5/outliers.py](lab5/outliers.py)
+
+6. **Filter Data Based on Conditions**
+   - Filter rows from a DataFrame based on specific conditions.
+   - Example: Select students with marks greater than 90.
+   - File: [lab5/conditionCSV.py](lab5/conditionCSV.py)
+
+7. **Data Transformation**
+   - Transform data by applying operations on columns.
+   - Create new derived columns, apply scaling, normalization, etc.
+   - File: [lab5/transorm.py](lab5/transorm.py)
+
+### Data Files
+- [lab5/students.csv](lab5/students.csv) - Student records with names, ages, and marks
+- [lab5/transform.csv](lab5/transform.csv) - Original data for transformation
+- [lab5/cleanedTransform.csv](lab5/cleanedTransform.csv) - Cleaned and transformed data
+
+### Key Pandas Operations
+- `pd.read_csv()` - Load CSV files
+- `df.head()`, `df.shape` - Data exploration
+- `df.describe()` - Statistical summary
+- `df.duplicated()`, `df.drop_duplicates()` - Handle duplicates
+- `df.isnull()`, `df.fillna()` - Handle missing values
+- `df.quantile()` - Calculate quartiles for outlier detection
+- Boolean indexing - Filter data based on conditions
+
+---
+
+## Lab 6: Statistical Analysis and Data Visualization
+
+A Jupyter notebook covering statistical concepts including covariance, correlation, and data visualization using Matplotlib and Seaborn.
+
+### Topics Covered
+- Covariance calculation and interpretation
+- Correlation coefficient analysis
+- Statistical measures (mean, variance)
+- Data visualization with Matplotlib
+- Advanced plotting with Seaborn
+- Scatter plots, regression plots, and jointplots
+- Understanding relationships between variables
+
+### Questions and Objectives
+
+1. **Hours Studied vs Marks Scored**
+   - Create a dataset of hours studied and marks scored for 10 students
+   - Calculate the covariance between the two variables
+   - Plot the data using a scatter plot
+
+2. **Correlation Analysis**
+   - Using the same dataset, compute the correlation coefficient
+   - Interpret whether the relationship is positive, negative, or weak
+   - Visualize it using a seaborn regression plot
+
+3. **Temperature and Ice-Cream Sales**
+   - Generate a dataset of daily temperature and ice-cream sales
+   - Find the covariance between temperature and sales
+   - Plot the relationship using a scatter plot
+
+4. **Covariance vs Correlation Comparison**
+   - Calculate the correlation for the temperature vs ice-cream sales dataset
+   - Compare the covariance and correlation values
+   - Explain why correlation is easier to interpret
+
+5. **Random Data Relationship**
+   - Create two random numerical datasets with no clear relationship
+   - Compute their covariance and correlation
+   - Visualize them using a scatter plot and observe the pattern
+
+6. **Height and Weight Analysis**
+   - Load a small dataset with height and weight values
+   - Calculate mean, variance, covariance, and correlation
+   - Plot the data using a seaborn jointplot
+
+7. **Linear vs Random Comparison**
+   - Create a dataset where one variable increases linearly and another increases randomly
+   - Compute covariance and correlation
+   - Plot both cases and compare the results
+
+### Key Libraries
+- **NumPy** - Numerical computing and random data generation
+- **Pandas** - Data manipulation and analysis
+- **Matplotlib** - Basic plotting and visualization
+- **Seaborn** - Statistical data visualization
+
+### Key Statistical Concepts
+- **Covariance**: Measures how two variables change together (units dependent)
+- **Correlation**: Standardized measure of linear relationship (-1 to 1)
+- **Positive Correlation**: Both variables increase together
+- **Negative Correlation**: One increases while the other decreases
+- **No Correlation**: Variables show no linear relationship
+
+### Visualization Types
+- **Scatter Plot** - Shows relationship between two variables
+- **Regression Plot** - Scatter plot with fitted regression line
+- **Joint Plot** - Combines scatter plot with marginal distributions
+
+**File:** [lab6.ipynb](lab6.ipynb)
+
+---
